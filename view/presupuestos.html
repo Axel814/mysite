@@ -4,10 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <link rel=stylesheet href=../styles/style.css>
+        <!-- Nececitamos esta librería para incluir logotipos en el pie de la página -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Presupuestos</title>
     </head>
     <body>
         <header>
+            <img id="logo"
+                 src="../images/logo.webp"
+                 alt="logotipo"
+                 width="900"
+                 height="612">
             <h1>Componentes mecánicos</h1>
         </header>
         <nav>
@@ -23,32 +30,39 @@
                 los campos):</h2>
             <div class="container">
                 <form>
-                    <label for="name">Nombre*:</label>
+                    <label for="name">
+                        Nombre<span class="required">*</span>:
+                    </label>
                     <input type="text"
                            id="name"
                            name="name"
                            placeholder="Su nombre"
                            required>
 
-                    <label for="mail">Email*:</label>
+                    <label for="mail">
+                        Email<span class="required">*</span>:
+                    </label>
                     <input type="email"
                            id="mail"
                            name="mail"
                            placeholder="Su correo electrónico"
                            required>
 
-                    <label for="tel">Teléfono*:</label>
+                    <label for="tel">
+                        Teléfono<span class="required">*</span>:
+                    </label>
                     <input type="tel"
                            id="tel"
                            name="tel"
                            placeholder="Su teléfono"
                            required>
 
-                    <label for="msg">Solicite más información*:</label>
+                    <label for="msg">
+                        Solicite más información<span class="required">*</span>:
+                    </label>
                     <textarea id="msg"
                               name="msg"
-                              placeholder="Puede escribir un mensaje breve para
-                                  solicitar más informacíon"
+                              placeholder="Puede escribir un mensaje breve para solicitar más informacíon"
                               required></textarea>
 
                     <input type="submit" value="Enviar">
@@ -60,5 +74,11 @@
                 </form>
             </div>
         </main>
+        <footer>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            Copyright Mecacomp 2024
+        </footer>
     </body>
 </html>

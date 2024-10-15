@@ -4,10 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <link rel=stylesheet href=../styles/style.css>
+        <!-- Nececitamos esta librería para incluir logotipos en el pie de la página -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Presupuestos</title>
     </head>
     <body>
         <header>
+            <img id="logo"
+                 src="../images/logo.webp"
+                 alt="logotipo"
+                 width="900"
+                 height="612">
             <h1>Componentes mecánicos</h1>
         </header>
         <nav>
@@ -19,14 +26,20 @@
             </ul>
         </nav>
         <main>
-            <h2>Aquí está nuestra ubicación:</h2>
             <section>
-                <img class="building" src="../images/ubicacion.jpg">
+                <h2>Aquí está nuestra ubicación:</h2>
+                <img alt="El alojamiento de la empresa" class="building" src="../images/ubicacion.jpg">
                 <address>
                     Teléfono: 3553556553<br>
                     Email: mecacomp@gmail.com
                 </address>
             </section>
         </main>
+        <footer>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            Copyright Mecacomp 2024
+        </footer>
     </body>
 </html>
