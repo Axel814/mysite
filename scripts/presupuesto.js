@@ -25,9 +25,9 @@ function updateQuota() {
 
     if (value > 5 && value < 10) {
         total *= .95;
-    } else if (value > 10 && value < 30) {
+    } else if (value > 10 && value <= 30) {
         total *= .90;
-    } else if (value > 30 && value < 60) {
+    } else if (value > 30 && value <= 60) {
         total *= .85;
     } else if (value > 60) {
         total *= .80;
