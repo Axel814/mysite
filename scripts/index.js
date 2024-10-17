@@ -1,6 +1,6 @@
 'use strict';
 
-fetch('../news/news.json').then(async response => {
+fetch('news/news.json').then(async response => {
     const articles = await response.json();
     const news = document.getElementById('newsContainer');
 
