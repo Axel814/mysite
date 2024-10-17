@@ -23,7 +23,7 @@ function updateQuota() {
 
     const value = +term.value;
 
-    if (value > 5 && value < 10) {
+    if (value > 5 && value <= 10) {
         total *= .95;
     } else if (value > 10 && value <= 30) {
         total *= .90;
