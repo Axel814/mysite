@@ -13,7 +13,9 @@ h2,
 p,
 footer,
 label,
-address {
+address,
+legend,
+.checkboxes-label {
     font-family: "Merriweather", serif;
 }
 
@@ -36,6 +38,13 @@ header {
 
 body {
     background-color: #F1FAEE;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    /* Si no aplicamos z-index el mapa va a cubrir la navegación */
+    z-index: 10000;
 }
 
 nav ul {
@@ -129,12 +138,21 @@ footer {
     color: white;
 }
 
+#location {
+    margin-right: auto;
+}
+
+#newsContainer {
+    height: 800px;
+}
+
 /* || Los estílos para la forma */
 
 input[type=text],
 input[type=email],
 input[type=tel],
-textarea {
+input[type=number],
+select {
     width: 100%;
     padding: 15px;
     border: 1px solid #ccc;
@@ -144,11 +162,13 @@ textarea {
     font-family: inherit;
 }
 
-textarea {
-    resize: vertical;
+legend {
+    background-color: #457B9D;
+    color: white;
+    border-radius: 3px;
 }
 
-input[type=submit] {
+input[type=button] {
     background-color: #0465aa;
     color: #F1FAEE;
     padding: 12px 20px;
@@ -158,7 +178,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type=button]:hover {
     background-color: #454da0;
 }
 
@@ -172,29 +192,70 @@ input[type=submit]:hover {
     color: #E63946;
 }
 
+.extras-list {
+    list-style: none;
+    padding: 0;
+}
+
 /* || Los estílos para la galería */
 
-.images-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
-    width: 50%;
-    margin-left: 12vw;
-    background-color: #A8DADC;
+.slideshow-container {
+    max-width: 17%;
+    height: 60vh;
+    position: relative;
+    margin: auto;
 }
 
-.image-item {
-    width: 100%;
+.mySlides {
+    display: none;
 }
 
-.image-item img {
+.mySlides img {
     max-width: 100%;
     height: auto;
-    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #457B9D;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* || Los estílos para el contacto */
 
-img.building {
-    max-width: 100%;
+#map {
+    max-width: 50%;
+    height: 80vh;
 }

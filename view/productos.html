@@ -6,6 +6,7 @@
         <link rel=stylesheet href=../styles/style.css>
         <!-- Nececitamos esta librería para incluir logotipos en el pie de la página -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script defer src="../scripts/productos.js"></script>
         <title>Presupuestos</title>
     </head>
     <body>
@@ -20,7 +21,7 @@
         <nav>
             <ul>
                 <li><a href="../index.html">Página principal</a></li>
-                <li><a href="presupuestos.html">Presupuestos</a></li>
+                <li><a href="presupuesto.html">Presupuesto</a></li>
                 <li><a href="#" class="active">Productos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
@@ -28,83 +29,100 @@
         <main>
             <section>
                 <h2>Aquí puede ver nuestros productos:</h2>
-                <div class="images-container">
-                    <div class="image-item">
+                <div class="slideshow-container">
+                    
+                    <div class="mySlides fade">
                         <img src="../images/image1.jfif"
-                             alt="Componentes mecánicos"
+                             alt="componente mecánico"
                              width="255"
                              height="255">
                     </div>
-                    <div class="image-item">
+
+                    <div class="mySlides fade">
                         <img src="../images/image2.jfif"
-                             alt="Componentes mecánicos"
+                             alt="componente mecánico"
                              width="255"
                              height="255">
                     </div>
-                    <div class="image-item">
+                
+                    <div class="mySlides fade">
                         <img src="../images/image3.jfif"
-                             alt="Componentes mecánicos"
+                             alt="componente mecánico"
                              width="255"
                              height="197">
                     </div>
-                    <div class="image-item">
+
+                    <div class="mySlides fade">
                         <img src="../images/image4.jfif"
-                             alt="Componentes mecánicos"
+                             alt="componente mecánico"
                              width="232"
                              height="217">
                     </div>
-                    <div class="image-item">
+
+                    <div class="mySlides fade">
                         <img src="../images/image5.jfif"
-                             alt="Componentes mecánicos"
+                             alt="componente mecánico"
                              width="259"
                              height="195">
                     </div>
-                    <div class="image-item">
+
+                    <div class="mySlides fade">
                         <img src="../images/image6.jfif"
-                             alt="Componentes mecánicos"
+                             alt="componente mecánico"
                              width="248"
                              height="203">
                     </div>
-                    <div class="image-item">
+                    
+                    <div class="mySlides fade">
                         <img src="../images/image7.jfif"
-                             alt="Componentes mecánicos"
+                             alt="componente mecánico"
                              width="168"
                              height="300">
                     </div>
-                    <div class="image-item">
+                    
+                    <div class="mySlides fade">
                         <img src="../images/image8.jfif"
-                             alt="Componentes mecánicos"
+                             alt="componente mecánico"
                              width="296"
                              height="170">
                     </div>
-                    <div class="image-item">
+                    
+                    <div class="mySlides fade">
                         <img src="../images/image9.jfif"
-                             alt="Componentes mecánicos"
+                             alt="componente mecánico"
                              width="255"
                              height="255">
                     </div>
-                    <div class="image-item">
+                    
+                    <div class="mySlides fade">
                         <img src="../images/image10.webp"
-                             alt="Componentes mecánicos"
+                             alt="componente mecánico"
                              width="256"
                              height="256">
                     </div>
-                    <div class="image-item">
+                    
+                    <div class="mySlides fade">
                         <img src="../images/image11.jpg"
-                             alt="Componentes mecánicos"
+                             alt="componente mecánico"
                              width="400"
                              height="307">
                     </div>
-                    <div class="image-item">
+                    
+                    <div class="mySlides fade">
                         <img src="../images/image12.jpg"
-                             alt="Componentes mecánicos"
+                             alt="componente mecánico"
                              width="512"
                              height="512">
                     </div>
+                
+                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
                 </div>
             </section>
         </main>
         <footer>
+            <span id="location">Ubicación: 6, Calle del Tinte, San Isidro,
+                Distrito I, Alcalá de Henares, Community of Madrid, 28801</span>
             <a href="#" class="fa fa-google"></a>
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-twitter"></a>

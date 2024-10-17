@@ -3,9 +3,31 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
+
+        <!-- Estos estilos son necesarios para el mapa -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin="">
+
         <link rel=stylesheet href=../styles/style.css>
+
         <!-- Nececitamos esta librería para incluir logotipos en el pie de la página -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Estilos para las rutas -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css">
+
+        <!-- Esta librería es necesaria para el mapa -->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+
+        <!-- Librería para calcular las rutas -->
+        <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+        <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+        <script defer src="../scripts/contacto.js"></script>
         <title>Presupuestos</title>
     </head>
     <body>
@@ -20,7 +42,7 @@
         <nav>
             <ul>
                 <li><a href="../index.html">Página principal</a></li>
-                <li><a href="presupuestos.html">Presupuestos</a></li>
+                <li><a href="presupuesto.html">Presupuesto</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="#" class="active">Contacto</a></li>
             </ul>
@@ -28,14 +50,18 @@
         <main>
             <section>
                 <h2>Aquí está nuestra ubicación:</h2>
-                <img alt="El alojamiento de la empresa" class="building" src="../images/ubicacion.jpg">
+                <div id="map"></div>
                 <address>
                     Teléfono: 3553556553<br>
-                    Email: mecacomp@gmail.com
+                    Email: mecacomp@gmail.com<br>
+                    Ubicación: 6, Calle del Tinte, San Isidro, Distrito I,
+                        Alcalá de Henares, Community of Madrid, 28801
                 </address>
             </section>
         </main>
         <footer>
+            <span id="location">Ubicación: 6, Calle del Tinte, San Isidro,
+                Distrito I, Alcalá de Henares, Community of Madrid, 28801</span>
             <a href="#" class="fa fa-google"></a>
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-twitter"></a>

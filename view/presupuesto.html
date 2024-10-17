@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel=stylesheet href=../styles/style.css>
+        <!-- Nececitamos esta librería para incluir logotipos en el pie de la página -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script defer src="../scripts/presupuesto.js"></script>
+        <title>Presupuesto</title>
+    </head>
+    <body>
+        <header>
+            <img id="logo"
+                 src="../images/logo.webp"
+                 alt="logotipo"
+                 width="900"
+                 height="612">
+            <h1>Componentes mecánicos</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Página principal</a></li>
+                <li><a href="#" class="active">Presupuesto</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Puede solicitar la informacíon aquí (tiene que rellenar totos
+                los campos):</h2>
+            <div class="container">
+                <form>
+                    <fieldset>
+                        <legend>Datos de contacto</legend>
+                        <label for="fname">
+                            Nombre<span class="required">*</span>:
+                        </label>
+                        <input type="text"
+                               id="fname"
+                               name="fname"
+                               placeholder="Su nombre"
+                               maxlength="15"
+                               required>
+                        
+                        <label for="lname">
+                            Apellidos<span class="required">*</span>:
+                        </label>
+                        <input type="text"
+                               id="lname"
+                               name="lname"
+                               placeholder="Sus apellidos"
+                               maxlength="40"
+                               required>
+
+                        <label for="tel">
+                            Teléfono<span class="required">*</span>:
+                        </label>
+                        <input type="tel"
+                               id="tel"
+                               name="tel"
+                               placeholder="Su teléfono"
+                               required>
+
+                        <label for="mail">
+                            Email<span class="required">*</span>:
+                        </label>
+                        <input type="email"
+                               id="mail"
+                               name="mail"
+                               placeholder="Su correo electrónico"
+                               required>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Presupuesto</legend>
+                        <label for="product">
+                            Seleccione un producto deseado:
+                        </label>
+                        <select id="product"
+                                name="product">
+                            <option value="motor" selected>Un motor</option>
+                            <option value="pump">Una bomba</option>
+                            <option value="gears">Un pack de engranajes</option>
+                        </select>
+                        <label for="term">
+                            ¿En cuántos días quiere recibir el producto?:
+                        </label>
+                        <input type="number"
+                               id="term"
+                               name="term"
+                               value="5"
+                               min="1"
+                               max="180">
+                        <span class="checkboxes-label">
+                            Seleccione otras opciones que desea añadir:
+                        </span>
+                        <ul class="extras-list">
+                            <li>
+                                <input id="glue"
+                                       type="checkbox"
+                                       name="extras"
+                                       value="glue">
+                                <label for="glue">
+                                    Cola
+                                </label>
+                            </li>
+                            <li>
+                                <input id="motorOil"
+                                       type="checkbox"
+                                       name="extras"
+                                       value="motorOil">
+                                <label for="motorOil">
+                                    Aceite de motor
+                                </label>
+                            </li>
+                            <li>
+                                <input id="wrenches"
+                                       type="checkbox"
+                                       name="extras"
+                                       value="wrenches">
+                                <label for="wrenches">
+                                    Llaves
+                                </label>
+                            </li>
+                            <li>
+                                <input id="nuts"
+                                       type="checkbox"
+                                       name="extras"
+                                       value="nuts">
+                                <label for="nuts">
+                                    Un pack de tuercas
+                                </label>
+                            </li>
+                        </ul>
+                        <label for="quote">Presupuesto:</label>
+                        <input id="quote" type="tel" readonly>
+                    </fieldset>
+
+                    <input id="submitBtn" type="button" value="Enviar">
+
+                    <label for="policy">
+                        ¿Accepta nuestra política de privacidad?
+                    </label>
+                    <input type="checkbox" id="policy" name="policy">
+                </form>
+            </div>
+        </main>
+        <footer>
+            <span id="location">Ubicación: 6, Calle del Tinte, San Isidro,
+                Distrito I, Alcalá de Henares, Community of Madrid, 28801</span>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            Copyright Mecacomp 2024
+        </footer>
+    </body>
+</html>
